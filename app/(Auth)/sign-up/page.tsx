@@ -1,31 +1,34 @@
 import { Box, Link, Theme, Flex } from "@chakra-ui/react"
 import Image from 'next/image'
+import { CardWithForm } from '@/components/cardWithFormSignup'
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
-import { CardWithForm } from '@/components/cardWithFormLogin'
+
 
 export default function Login() {
     return (
-
+        
         <div className='flex justify-center items-center h-screen w-full'>
         
             <div className='lg:w-1/2 w-full flex flex-col justify-center items-center'>
 
-                <div className="flex flex-col justify-center items-center text-start mb-16 w-full">
-                    <h1 className="text-5xl font-bold w-3/6">
-                        Bem vindo de volta!
+                <div className="flex flex-col justify-center items-center mb-16 w-full">
+                    <h1 className="text-5xl font-bold w-4/6 xl:ms-32">
+                        Bem vindo a TruthDAO!
                     </h1>
 
-                    <p className="text-xl opacity-50 w-3/6 mt-4">Vamos combater a desinformação!</p>
+                    <p className="text-xl opacity-50 w-2/3 xl:ms-32 mt-8">Faça parte de uma comunidade que luta junto contra a
+                        disseminassão de informações falsas.
+                    </p>
                 </div>
 
                 <CardWithForm />
 
                 <div className="flex gap-2 mt-6 mb-14">
-                    <span> Não tem conta? </span>
-                    <Link href="/sign-up" color='blue.solid' className="underline">
-                        Crie agora
+                    <span> Já possui conta? </span>
+                    <Link href="/login" color='blue.solid' className="underline">
+                        Entrar
                     </Link>
                 </div>
 
