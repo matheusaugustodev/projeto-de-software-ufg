@@ -4,9 +4,9 @@ import { Field } from "@/components/ui/field"
 export const CardWithForm = () => (
   <Theme appearance="light">
 
-    <Card.Root borderWidth={'1px'} minW='sm'  w='lg' flexWrap={'wrap'} >
+    <Card.Root borderWidth={'1px'} sm={{w: 'sm'}}  w='lg' flexWrap={'wrap'} >
       <Card.Body>
-        <Stack gap="4" w="full">
+        <Stack gap="4" w="full">  
           <Field label="Email">
             <Input p='4' placeholder="example@email.com" borderWidth={'1px'}/>
           </Field>
