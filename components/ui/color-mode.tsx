@@ -46,7 +46,7 @@ export const ColorModeButton = forwardRef<
     <ClientOnly fallback={<Skeleton boxSize="8" />}>
       <IconButton
         onClick={toggleColorMode}
-        variant="ghost"
+        variant="solid"
         aria-label="Toggle color mode"
         size="sm"
         ref={ref}

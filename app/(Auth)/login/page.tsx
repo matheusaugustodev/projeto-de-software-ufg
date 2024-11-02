@@ -1,4 +1,4 @@
-import { Card, Stack, Text } from "@chakra-ui/react"
+import { Box, Link, Theme, Flex } from "@chakra-ui/react"
 import Image from 'next/image'
 import { CardWithForm } from '@/components/CardWithForm'
 
@@ -7,28 +7,35 @@ export default function Login() {
         <div className='flex justify-center items-center h-screen w-full'>
         
             <div className='w-1/2 flex flex-col items-center'>
-                <h1>
-                    Bem vindo de volta!
-                </h1>
 
-                <p>Vamos combate a desinformação!</p>
+                <div className="text-start mb-16">
+                    <h1 className="text-5xl font-bold">
+                        Bem vindo de volta!
+                    </h1>
+
+                    <p className="text-xl opacity-50">Vamos combater a desinformação!</p>
+                </div>
 
                 <CardWithForm />
 
-                <span> Não tem conta? </span>
+                <div className="flex gap-2 mt-6 mb-14">
+                    <span> Não tem conta? </span>
+                    <Link href="/" color='blue.solid' className="underline" variant="underline">
+                        Crie agora
+                    </Link>
+                </div>
 
-                <p>Outras opções</p>
+                <p className="opacity-50">Outras opções</p>
             
-                
-                <Card.Root w="md">
-                    <Card.Body>
-                        <Stack direction="row" justify={'center'} gap={4}>
-                        <Text>Facebook</Text>
-                        <Text>Google</Text>
-                        <Text>Apple</Text>
-                        </Stack>
-                    </Card.Body>
-                </Card.Root>
+                <Theme appearance="light">
+
+                    <Flex justify={'space-between'} gap='4'>
+                        <Box borderWidth="1px" p='4' borderRadius='md'>Facebook</Box>
+                        <Box borderWidth="1px" p='4'  borderRadius='md'>Google</Box>
+                        <Box borderWidth="1px" p='4'  borderRadius='md'>Apple</Box>
+                    </Flex>
+
+                </Theme>
             </div>
 
             <div className='w-1/2 bg-customBlue h-full flex flex-col items-center justify-center text-center'>

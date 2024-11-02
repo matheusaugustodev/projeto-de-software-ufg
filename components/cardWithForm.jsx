@@ -1,20 +1,28 @@
-import { Button, Card, Input, Stack, Theme } from "@chakra-ui/react"
+import { Button, Card, Input, Stack, Theme, Link } from "@chakra-ui/react"
 import { Field } from "@/components/ui/field"
 
 export const CardWithForm = () => (
-  <Card.Root maxW="sm" colorPalette='gray'>
-    <Card.Body>
-      <Stack gap="4" w="full">
-        <Field label="Email">
-          <Input placeholder="example@gmail.com"  variant="outline"/>
-        </Field>
-        <Field label="Senha">
-          <Input placeholder="senha" variant="outline"/>
-        </Field>
-      </Stack>
-    </Card.Body>
-    <Card.Footer justifyContent="flex-end">
-      <Button variant="solid" colorPalette='blackAlpha' w='full'>Entrar</Button>
-    </Card.Footer>
-  </Card.Root>
+  <Theme appearance="light">
+
+    <Card.Root borderWidth={'1px'} minW='sm'  w='lg' flexWrap={'wrap'} >
+      <Card.Body>
+        <Stack gap="4" w="full">
+          <Field label="Email">
+            <Input p='4' placeholder="example@email.com" borderWidth={'1px'}/>
+          </Field>
+          <Field label="Senha">
+            <Input p='4' placeholder="senha" borderWidth={'1px'}/>
+          </Field>
+        </Stack>
+      </Card.Body>
+      <Card.Footer flexDir={'column'} className="items-start">
+        <Button bg='blue.solid' color='white' className="w-full">
+          Entrar
+        </Button>
+        <Link href="/" color='blue.solid' className="items-start underline">
+          Esqueceu a senha?
+        </Link>
+      </Card.Footer>
+    </Card.Root>
+  </Theme>
 )
