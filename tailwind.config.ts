@@ -12,6 +12,8 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         customBlue: '#001f9c',
+        serviceBox: '#193ad4',
+        perfilCard: '#8f9ad3'
       },
     },
   },

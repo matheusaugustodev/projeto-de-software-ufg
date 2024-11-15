@@ -30,7 +30,9 @@ export const AccordionItemTrigger = forwardRef<
   )
 })
 
-interface AccordionItemContentProps extends Accordion.ItemContentProps {}
+interface AccordionItemContentProps extends Accordion.ItemContentProps {
+  customClassName?: string;
+}
 
 export const AccordionItemContent = forwardRef<
   HTMLDivElement,

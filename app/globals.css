@@ -19,3 +19,26 @@ body {
   background: var(--background);
   font-family: Inter, Arial, Helvetica, sans-serif;
 }
+
+/* Esconde o input de arquivo */
+input[type="file"] {
+  display: none;
+}
+
+/* Estilos para o label personalizado */
+.custom-file-upload {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #5c5c5c;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.custom-file-upload:hover {
+  background-color: #0056b3;
+}
