@@ -1,8 +1,6 @@
 "use client"
 import NavBar from "@/components/navBar"
 import { Card } from "@chakra-ui/react"
-import { style } from "framer-motion/client";
-import Image from "next/image"
 import React, { useState } from "react";
 import { IoPersonSharp } from "react-icons/io5";
 
@@ -13,8 +11,8 @@ export default function PerfilPage() {
 
     const renderedImage = imageSrc ? <img src={imageSrc as string} className='rounded-full w-36 h-36' alt="Uploaded" /> : <IoPersonSharp className="w-24 h-24 text-gray-500"/>;
 
-    const handleFileChange = (event:any) => {
-        const file = event.target.files[0];
+    const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const file = (event.target as HTMLInputElement).files?.[0];
         if (file) {
             const reader = new FileReader();
             reader.onload = function() {
@@ -26,7 +24,7 @@ export default function PerfilPage() {
 
     return (
         
-        <>
+        <div>
             <NavBar />
 
             <section className="bg-customBlue h-screen text-white flex flex-col">
@@ -36,7 +34,7 @@ export default function PerfilPage() {
                         <h1 className="text-3xl font-bold">Perfil</h1>
                         <p className="w-2/3 mt-8">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore fuga cumque, magni laboriosam corrupti earum eius commodi beatae alias, deleniti aliquam neque, exercitationem dolorem id quos consectetur perspiciatis tempora aperiam.</p>
                     </div>
-                    <Card.Root className="w-80 h-80 bg-perfilCard mt-24 rounded">
+                    {/* <Card.Root className="w-80 h-80 bg-perfilCard mt-24 rounded">
                         <Card.Body className="flex justify-center items-center">
                             <h2 className="text-4xl p-2 font-bold">Usuário</h2>
                             <div className="w-40 h-40 bg-slate-200 rounded-full flex items-center justify-center">
@@ -51,9 +49,9 @@ export default function PerfilPage() {
                                     Selecionar imagem
                                 </label>
                                 <input id="fileUpload" type="file" onChange={handleFileChange} />
-                            </div>
+                            </div>' 
                         </Card.Body>
-                    </Card.Root>
+                    </Card.Root> */}
                     
                 </div>
 
@@ -83,6 +81,6 @@ export default function PerfilPage() {
                 </div>
 
             </section>
-        </>
+        </ div>
     )
 }

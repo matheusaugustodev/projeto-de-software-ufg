@@ -4,6 +4,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import { CardWithForm } from '@/components/cardWithFormLogin'
+import LoginOptions from '@/components/loginOptions'
 
 export default function Login() {
     return (
@@ -26,7 +27,7 @@ export default function Login() {
                     <span> Não tem conta? </span>
                     <Link href="/sign-up" color='blue.solid' className="underline">
                         Crie agora
-                    </Link>
+                    </Link> 
                 </div>
 
 
@@ -34,16 +35,7 @@ export default function Login() {
                         <p className="py-6 bg-white text-gray-300">Outras opções</p>
                     </div>
 
-            
-                <Theme appearance="light" w='3/4'>
-                    <Flex justify={'space-evenly'}>
-                        <Box borderWidth="1px" px='6' py='2' borderRadius='md'>
-                            <FaFacebook className=" text-6xl text-blue-700" />
-                        </Box>
-                        <Box borderWidth="1px" px='6' py='2'  borderRadius='md'><FcGoogle className="text-6xl" /></Box>
-                        <Box borderWidth="1px" px='6' py='2'  borderRadius='md'><FaApple className="text-6xl"/></Box>
-                    </Flex>
-                </Theme>
+                <LoginOptions />
             </div>
 
             <div className='w-1/2 bg-customBlue h-full flex flex-col items-center justify-center text-center max-md:hidden'>

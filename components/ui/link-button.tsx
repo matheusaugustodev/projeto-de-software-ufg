@@ -4,7 +4,9 @@ import type { HTMLChakraProps, RecipeProps } from "@chakra-ui/react"
 import { createRecipeContext } from "@chakra-ui/react"
 
 export interface LinkButtonProps
-  extends HTMLChakraProps<"a", RecipeProps<"button">> {}
+  extends HTMLChakraProps<"a", RecipeProps<"button">> {
+  customClassName?: string;
+  }
 
 const { withContext } = createRecipeContext({ key: "button" })
 
