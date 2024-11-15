@@ -1,3 +1,4 @@
+"use client"
 import { Button, Card, Input, Stack, Theme, Link } from "@chakra-ui/react"
 import { Field } from "@/components/ui/field"
 

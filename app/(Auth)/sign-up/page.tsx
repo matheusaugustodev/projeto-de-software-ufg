@@ -1,4 +1,4 @@
-import { Box, Link, Theme, Flex } from "@chakra-ui/react"
+import { Link } from "@chakra-ui/react"
 import Image from 'next/image'
 import { CardWithForm } from '@/components/cardWithFormSignup'
 import LoginOptions from '@/components/loginOptions'

@@ -34,7 +34,7 @@ export default function PerfilPage() {
                         <h1 className="text-3xl font-bold">Perfil</h1>
                         <p className="w-2/3 mt-8">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore fuga cumque, magni laboriosam corrupti earum eius commodi beatae alias, deleniti aliquam neque, exercitationem dolorem id quos consectetur perspiciatis tempora aperiam.</p>
                     </div>
-                    {/* <Card.Root className="w-80 h-80 bg-perfilCard mt-24 rounded">
+                    <Card.Root className="w-80 h-80 bg-perfilCard mt-24 rounded">
                         <Card.Body className="flex justify-center items-center">
                             <h2 className="text-4xl p-2 font-bold">Usuário</h2>
                             <div className="w-40 h-40 bg-slate-200 rounded-full flex items-center justify-center">
@@ -49,9 +49,9 @@ export default function PerfilPage() {
                                     Selecionar imagem
                                 </label>
                                 <input id="fileUpload" type="file" onChange={handleFileChange} />
-                            </div>' 
+                            </div> 
                         </Card.Body>
-                    </Card.Root> */}
+                    </Card.Root>
                     
                 </div>
 

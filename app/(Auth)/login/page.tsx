@@ -1,8 +1,5 @@
-import { Box, Link, Theme, Flex } from "@chakra-ui/react"
+import { Link } from "@chakra-ui/react"
 import Image from 'next/image'
-import { FaFacebook } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
-import { FaApple } from "react-icons/fa";
 import { CardWithForm } from '@/components/cardWithFormLogin'
 import LoginOptions from '@/components/loginOptions'
 
