@@ -24,7 +24,7 @@ export function CardWithForm() {
 
     <Theme appearance="light">
       <form action="" onSubmit={handleFormSubmit}>
-        <Card.Root borderWidth={'1px'} w='md' smToLg={{w:'sm'}} flexWrap={'wrap'} >
+        <Card.Root borderWidth={'1px'} mdDown={{w:'sm'}} w={'md'} flexWrap={'wrap'} >
           <Card.Body>
             <Stack gap="4" w="full">  
                 <Field label="Email">

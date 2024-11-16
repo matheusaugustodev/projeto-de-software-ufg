@@ -13,13 +13,6 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "types": [
-      "node",
-      "react",
-      "react-dom",
-      "react/jsx-runtime",
-      "@types/apexcharts"
-    ],
     "plugins": [
       {
         "name": "next"

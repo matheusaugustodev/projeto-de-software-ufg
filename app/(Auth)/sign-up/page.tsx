@@ -9,14 +9,14 @@ export default function Login() {
         
         <div className='flex justify-center items-center h-screen w-full'>
         
-            <div className='lg:w-1/2 w-full flex flex-col justify-center items-center'>
+            <div className='xl:w-3/5 max-xl:w-9/11 flex flex-col justify-center items-center'>
 
-                <div className="flex flex-col justify-center items-center mb-12 w-full">
-                    <h1 className="text-3xl font-bold w-4/6 xl:ms-32">
+                <div className="flex flex-col justify-center items-center mb-4 md:mb-8 w-full">
+                    <h1 className="text-3xl font-bold w-4/6 2xl:ms-32">
                         Bem vindo a TruthDAO!
                     </h1>
 
-                    <p className="text-lg opacity-50 w-2/3 xl:ms-32 mt-8">Faça parte de uma comunidade que luta junto contra a
+                    <p className="text-lg opacity-50 w-2/3 2xl:ms-32 md:mt-8">Faça parte de uma comunidade que luta junto contra a
                         disseminassão de informações falsas.
                     </p>
                 </div>
@@ -32,7 +32,7 @@ export default function Login() {
 
 
                     <div className="h-px flex justify-center items-center bg-gray-300 w-3/5 mb-6">
-                        <p className="py-6 bg-white text-gray-300">Outras opções</p>
+                        <p className=" bg-white text-gray-300">Outras opções</p>
                     </div>
 
                     <LoginOptions />
