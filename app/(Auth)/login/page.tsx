@@ -11,11 +11,11 @@ export default function Login() {
             <div className='lg:w-1/2 w-full flex flex-col justify-center items-center'>
 
                 <div className="flex flex-col justify-center items-center text-start mb-16 w-full">
-                    <h1 className="text-5xl font-bold w-3/6">
+                    <h1 className="text-3xl font-bold w-3/6">
                         Bem vindo de volta!
                     </h1>
 
-                    <p className="text-xl opacity-50 w-3/6 mt-4">Vamos combater a desinformação!</p>
+                    <p className="text-lg opacity-50 w-3/6 mt-4">Vamos combater a desinformação!</p>
                 </div>
 
                 <CardWithForm />
@@ -36,7 +36,7 @@ export default function Login() {
             </div>
 
             <div className='w-1/2 bg-customBlue h-full flex flex-col items-center justify-center text-center max-md:hidden'>
-                <Image src="/images/mainImage.png" className="scale-x-[-1]" alt="mainImage" width={800} height={800}/>
+                <Image src="/images/mainImage.png" className="scale-x-[-1]" alt="mainImage" width={600} height={600}/>
             </div>
 
             

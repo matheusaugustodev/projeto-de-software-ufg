@@ -42,3 +42,15 @@ input[type="file"] {
 .custom-file-upload:hover {
   background-color: #0056b3;
 }
+
+/* Primeiro marcador (Votoadas) */
+.apexcharts-legend-series:nth-child(1) .apexcharts-legend-marker {
+  width: 20px !important;
+  height: 10px !important;
+}
+
+/* Segundo marcador (Todos) */
+.apexcharts-legend-series:nth-child(2) .apexcharts-legend-marker {
+  width: 5px !important;
+  height: 20px !important;
+}
