@@ -20,7 +20,7 @@ class Donut extends Component {
                 radius: 12, // Arredondamento dos marcadores
             },
         },
-        color: ['#E9EDF0', '#3A5AFE'],
+        colors: ['#E9EDF0', '#3A5AFE'],
       },
       series: [210, 350], // Dados numéricos
     };
