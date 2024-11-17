@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import { IoMdSearch } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
 import { usePathname } from 'next/navigation';
 
