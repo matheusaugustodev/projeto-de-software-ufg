@@ -11,19 +11,19 @@ export default function Login() {
         
             <div className='xl:w-3/5 max-xl:w-9/11 flex flex-col justify-center items-center'>
 
-                <div className="flex flex-col justify-center items-center mb-4 md:mb-8 w-full">
+                <div className="flex flex-col justify-center items-center my-5 w-full">
                     <h1 className="text-3xl font-bold w-4/6 2xl:ms-32">
                         Bem vindo a TruthDAO!
                     </h1>
 
-                    <p className="text-lg opacity-50 w-2/3 2xl:ms-32 md:mt-8">Faça parte de uma comunidade que luta junto contra a
+                    <p className="text-lg opacity-50 w-2/3 2xl:ms-32 mt-2">Faça parte de uma comunidade que luta junto contra a
                         disseminassão de informações falsas.
                     </p>
                 </div>
 
                 <CardWithForm />
 
-                <div className="flex gap-2 mt-4 mb-8">
+                <div className="flex gap-2 mt-3 mb-3">
                     <span> Já possui conta? </span>
                     <Link href="/login" color='blue.solid' className="underline">
                         Entrar
@@ -31,11 +31,11 @@ export default function Login() {
                 </div>
 
 
-                    <div className="h-px flex justify-center items-center bg-gray-300 w-3/5 mb-6">
-                        <p className=" bg-white text-gray-300">Outras opções</p>
-                    </div>
+                <div className="h-px flex justify-center items-center bg-gray-300 w-3/5 mb-4">
+                    <p className="bg-white text-gray-300">Outras opções</p>
+                </div>
 
-                    <LoginOptions />
+                <LoginOptions />
             </div>
 
             <div className='w-1/2 bg-customBlue h-full flex flex-col items-center justify-center text-center max-md:hidden'>
