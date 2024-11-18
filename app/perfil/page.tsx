@@ -3,6 +3,7 @@ import NavBar from "@/components/navBar"
 import { Card } from "@chakra-ui/react"
 import React, { useState } from "react"
 import { IoPersonSharp } from "react-icons/io5"
+import Image from 'next/image'
 import dynamic from "next/dynamic";
 const Donut = dynamic(() => import("@/components/votacaoGrafico"), { ssr: false });
 
@@ -10,7 +11,7 @@ export default function PerfilPage() {
 
     const [imageSrc, setImageSrc] = useState<string | ArrayBuffer | null>(null);
 
-    const renderedImage = imageSrc ? <img src={imageSrc as string} className='rounded-full w-full h-full' alt="Uploaded" /> : <IoPersonSharp className="border p-2 border-black rounded-full h-24 w-24 text-gray-500"/>;
+    const renderedImage = imageSrc ? <Image src={imageSrc as string} className='rounded-full w-full h-full' alt="Uploaded" /> : <IoPersonSharp className="border p-2 border-black rounded-full h-24 w-24 text-gray-500"/>;
 
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         if (typeof window === 'undefined') return; // Garante que está no ambiente do cliente

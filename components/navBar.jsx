@@ -1,19 +1,20 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { CgProfile } from "react-icons/cg";
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 export default function NavBar() {
     // Array de pathnames
-    const pathnames = ['/servicos', '/votacao','regras', '/parceria', '/sobre'];
-    const pathname = usePathname(); // Obtém o pathname atual
+    const pathnames = useMemo(() => ['/servicos','/votacao', '/regras', '/parceria', '/sobre'], []);
     const [activeIndex, setActiveIndex] = useState(-1);
+    const pathname = usePathname(); // Obtém o pathname atual
 
     useEffect(() => {
         // Atualiza o índice ativo com base no pathname atual
         const currentIndex = pathnames.indexOf(pathname);
         setActiveIndex(currentIndex);
-    }, [pathname]);
+    }, [pathname, pathnames]);
 
     function styleLink(index) {
         // Adiciona a classe ativa com base no índice
@@ -21,9 +22,16 @@ export default function NavBar() {
     }
 
     return (
-        <nav className="bg-white shadow w-full ps-28 flex items-center justify-between">
-            <span className="">LOGO</span>
-            <nav className="h-16 w-11/12 flex items-center justify-evenly font-bold">
+        <nav className="bg-white shadow w-full ps-28 flex items-center">
+            <nav className="h-16 w-11/12 flex items-center justify-between font-bold">
+                {/* <span className=""> */}
+                    <Image
+                        src={'/images/logo.png'}
+                        alt="Logo"
+                        width={60}
+                        height={60}
+                    />
+                {/* </span> */}
                 <ul className="flex gap-12 items-center">
                     {pathnames.map((path, index) => (
                         <li

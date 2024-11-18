@@ -11,11 +11,11 @@ export default function Login() {
             <div className='lg:w-1/2 w-full flex flex-col justify-center items-center'>
 
                 <div className="flex flex-col justify-center items-center text-start my-6 w-full">
-                    <h1 className="text-3xl font-bold w-3/6">
+                    <h1 className="text-3xl font-bold">
                         Bem vindo de volta!
                     </h1>
 
-                    <p className="text-lg opacity-50 w-3/6 mt-4">Vamos combater a desinformação!</p>
+                    <p className="text-lg opacity-50 mt-4">Vamos combater a desinformação!</p>
                 </div>
 
                 <CardWithForm />
