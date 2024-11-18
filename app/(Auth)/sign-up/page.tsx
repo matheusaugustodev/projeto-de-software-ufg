@@ -12,11 +12,11 @@ export default function Login() {
             <div className='xl:w-3/5 max-xl:w-9/11 flex flex-col justify-center items-center'>
 
                 <div className="flex flex-col justify-center items-center my-5 w-full">
-                    <h1 className="text-3xl font-bold w-4/6 2xl:ms-32">
+                    <h1 className="text-3xl font-bold">
                         Bem vindo a TruthDAO!
                     </h1>
 
-                    <p className="text-lg opacity-50 w-2/3 2xl:ms-32 mt-2">Faça parte de uma comunidade que luta junto contra a
+                    <p className="text-lg opacity-50 w-3/5 text-center mt-2">Faça parte de uma comunidade que luta junto contra a
                         disseminassão de informações falsas.
                     </p>
                 </div>

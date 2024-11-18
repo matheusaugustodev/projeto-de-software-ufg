@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 
 export default function NavBar() {
     // Array de pathnames
-    const pathnames = ['/servicos', '/votacao','regras', '/parceria', '/sobre'];
+    const pathnames = ['/servicos','/votacao', '/regras', '/parceria', '/sobre'];
     const pathname = usePathname(); // Obtém o pathname atual
     const [activeIndex, setActiveIndex] = useState(-1);
 
@@ -21,9 +21,9 @@ export default function NavBar() {
     }
 
     return (
-        <nav className="bg-white shadow w-full ps-28 flex items-center justify-between">
-            <span className="">LOGO</span>
-            <nav className="h-16 w-11/12 flex items-center justify-evenly font-bold">
+        <nav className="bg-white shadow w-full ps-28 flex items-center">
+            <nav className="h-16 w-11/12 flex items-center justify-between font-bold">
+                <span className="">LOGO</span>
                 <ul className="flex gap-12 items-center">
                     {pathnames.map((path, index) => (
                         <li
