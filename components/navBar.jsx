@@ -22,7 +22,7 @@ export default function NavBar() {
     }
 
     return (
-        <nav className="bg-white shadow w-full ps-28 flex items-center">
+        <nav className="bg-white shadow w-full flex justify-center items-center">
             <nav className="h-16 w-11/12 flex items-center justify-between font-bold">
                 {/* <span className=""> */}
                     <Image
