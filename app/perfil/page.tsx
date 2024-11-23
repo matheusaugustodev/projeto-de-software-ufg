@@ -5,7 +5,7 @@ import React, { useState } from "react"
 import { IoPersonSharp } from "react-icons/io5"
 import Image from 'next/image'
 import dynamic from "next/dynamic";
-const Donut = dynamic(() => import("@/components/votacaoGrafico"), { ssr: false });
+const Donut = dynamic(() => import("@/components/Donuts/votacaoGrafico"), { ssr: false });
 
 export default function PerfilPage() {
 
