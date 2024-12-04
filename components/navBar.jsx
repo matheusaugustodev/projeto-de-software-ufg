@@ -3,6 +3,7 @@ import { useState, useEffect, useMemo } from "react";
 import { CgProfile } from "react-icons/cg";
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import Link from "next/link";
 
 export default function NavBar() {
 
@@ -32,14 +33,14 @@ export default function NavBar() {
     return (
         <nav className="bg-white shadow w-full flex justify-center items-center">
             <nav className="h-16 w-11/12 flex items-center justify-between font-bold">
-                <a href="/" title="Home">
+                <Link href="/" title="Home">
                     <Image
                         src={'/images/logo.png'}
                         alt="Logo"
                         width={60}
                         height={60}
                     />
-                </a>
+                </Link>
                 <ul className="flex gap-12 items-center">
                     {rotas.map((path, index) => (
                         <li
