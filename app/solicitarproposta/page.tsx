@@ -1,7 +1,7 @@
 import NavBar from "@/components/navBar"
 import { Button } from "@/components/ui/button"
 import Image from 'next/image'
-import { Stack, Textarea } from "@chakra-ui/react"
+import { Textarea } from "@chakra-ui/react"
 
 export default function SolicitarProposta() {
     return (
