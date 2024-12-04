@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Provider } from "@/components/ui/provider"
+import NavBar from "@/components/navBar"
 
 
 
@@ -32,6 +33,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Provider>
+          <NavBar />
           {children}
         </Provider>
       </body>
