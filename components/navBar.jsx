@@ -5,13 +5,21 @@ import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 
 export default function NavBar() {
+
+    const rotas = [
+        {nome: 'Serviços', path: '/servicos'},
+        {nome: 'Votação', path: '/votacao'},
+        {nome: 'Regras', path: '/regras'},
+        {nome: 'Parceria', path: '/parceria'},
+        {nome: 'Sobre', path: '/sobre'}
+    ]
+
     // Array de pathnames
-    const pathnames = useMemo(() => ['/servicos','/votacao', '/regras', '/parceria', '/sobre'], []);
+    const pathnames = useMemo(() => rotas.map(rota => rota.path), []);
     const [activeIndex, setActiveIndex] = useState(-1);
-    const pathname = usePathname(); // Obtém o pathname atual
+    const pathname = usePathname();
 
     useEffect(() => {
-        // Atualiza o índice ativo com base no pathname atual
         const currentIndex = pathnames.indexOf(pathname);
         setActiveIndex(currentIndex);
     }, [pathname, pathnames]);
@@ -24,21 +32,21 @@ export default function NavBar() {
     return (
         <nav className="bg-white shadow w-full flex justify-center items-center">
             <nav className="h-16 w-11/12 flex items-center justify-between font-bold">
-                {/* <span className=""> */}
+                <a href="/" title="Home">
                     <Image
                         src={'/images/logo.png'}
                         alt="Logo"
                         width={60}
                         height={60}
                     />
-                {/* </span> */}
+                </a>
                 <ul className="flex gap-12 items-center">
-                    {pathnames.map((path, index) => (
+                    {rotas.map((path, index) => (
                         <li
                             key={index}
                             className={styleLink(index)}
                         >
-                            <a href={path}>{path.replace('/', '')}</a>
+                            <a href={path.path} title={path.nome}>{path.nome}</a>
                         </li>
                     ))}
                 </ul>
