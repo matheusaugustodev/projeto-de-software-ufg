@@ -7,12 +7,28 @@
   --foreground: #171717;
 }
 
+* {
+  overflow: hidden;
+}
+
 /* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 } */
+
+.css-wuqtn7{
+  outline: 2px solid #2563eb;
+}
+
+a:active, a:hover, a:visited, a:link {
+  outline-width: 0;
+}
+
+.chakra-theme {
+  max-height: fit-content;
+}
 
 body {
   color: var(--foreground);
