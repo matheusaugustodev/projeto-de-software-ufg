@@ -38,7 +38,6 @@ export default function Home() {
         
         </div>
 
-
         <section className="bg-customBlue p-5 flex flex-col items-center py-20 text-center">
             <h1 className="text-white text-4xl font-bold mb-5">Qual nossa missão?</h1>
             
@@ -88,14 +87,22 @@ export default function Home() {
 
         <section className="bg-customBlue p-5 flex flex-col items-center pb-28 text-center">
             <h1 className="text-white text-4xl font-bold mb-5">Combata a desinformação com a TruthDAO</h1>
-            <Link href="/solicitarproposta" className="mt-4">
-              <Button colorPalette="cyan" className="bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-800 px-10" title="Começar">Começar</Button>
-            </Link>
+            <Button colorPalette="cyan" className="bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-800 px-10 mt-4" title="Começar">Começar</Button>
         </section>
+
+        <div className="flex justify-center gap-10 mb-20">
+            
+          <Link href="/solicitarproposta">
+            <Button colorPalette="cyan" className="bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-800 px-10" title="Solicitar Proposta">Solicitar Proposta</Button>
+          </Link>
+
+          <Link href="/dashboard">
+            <Button colorPalette="cyan" className="bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-800 px-10" title="Dashboard">Dashboard</Button>
+          </Link>
+
+        </div>
 
       </main>
     </div>
-
-
   );
 }
