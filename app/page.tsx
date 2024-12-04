@@ -1,6 +1,7 @@
 import NavBar from "@/components/navBar"
 import { Button } from "@/components/ui/button"
 import Image from 'next/image'
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -87,7 +88,9 @@ export default function Home() {
 
         <section className="bg-customBlue p-5 flex flex-col items-center pb-28 text-center">
             <h1 className="text-white text-4xl font-bold mb-5">Combata a desinformação com a TruthDAO</h1>
-            <Button colorPalette="cyan" className="bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-800 mt-4 px-10">Começar</Button>
+            <Link href="/solicitarproposta" className="mt-4">
+              <Button colorPalette="cyan" className="bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-800 px-10" title="Começar">Começar</Button>
+            </Link>
         </section>
 
       </main>

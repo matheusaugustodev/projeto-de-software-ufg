@@ -41,13 +41,13 @@ export default function NavBar() {
                         height={60}
                     />
                 </Link>
-                <ul className="flex gap-12 items-center">
+                <ul className="flex gap-16 items-center">
                     {rotas.map((path, index) => (
                         <li
                             key={index}
                             className={styleLink(index)}
                         >
-                            <a href={path.path} title={path.nome}>{path.nome}</a>
+                            <a href={path.path} title={path.nome} className="text-xs">{path.nome.toUpperCase()}</a>
                         </li>
                     ))}
                 </ul>
