@@ -5,8 +5,6 @@ import ShowVotacao from "@/components/showVotacao";
 
 export default function Votacao() {
 
-    const [remainingTime, setRemainingTime] = useState("");
-
     const [estadoVotacao, setEstadoVotacao] = useState('Indefinido');
 
     const votar = (e: React.MouseEvent<HTMLElement>) => {

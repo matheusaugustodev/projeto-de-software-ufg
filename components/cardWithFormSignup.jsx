@@ -1,5 +1,5 @@
 "use client";
-import { Button, Card, Input, Stack, Theme, Link, For } from "@chakra-ui/react"
+import { Button, Card, Input, Stack, Theme, Link } from "@chakra-ui/react"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Field } from "@/components/ui/field"
 

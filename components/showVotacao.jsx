@@ -5,8 +5,8 @@ import { Card } from "@chakra-ui/react";
 
 export default function ShowVotacao() {
   const [remainingTime, setRemainingTime] = useState("");
-  const [votos, setVotos] = useState(60);
-  const [votosNecessarios, setVotosNecessarios] = useState(60);
+  const [votos] = useState(60);
+  const [votosNecessarios] = useState(60);
   const [resultado, setResultado] = useState("Indefinido");
 
   // Atualiza o resultado sempre que votos ou votosNecessarios mudarem
