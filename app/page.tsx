@@ -5,17 +5,19 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="bg-customBlue h-screen">
+    <div className="bg-customBlue">
 
       <NavBar />
-      <main className="text-white">
+
+      <div className="text-white">
+
         <div className='flex justify-center items-center w-full mt-10'>
             
           <div className='lg:w-1/2 w-full flex flex-col justify-center items-center'>
 
             <div className="flex justify-center text-center">
-              <div className="flex flex-col justify-center items-center md:items-start md:text-start w-full gap-5">
-                  <div className="flex flex-col gap-2">
+              <div className="flex flex-col justify-center lg:items-start lg:text-start w-full gap-5 px-5">
+                  <div className="flex text-center lg:text-start flex-col gap-2">
                     <h1 className="text-4xl font-bold">
                         Descubra a verdade!
                     </h1>
@@ -23,16 +25,13 @@ export default function Home() {
                         Combata a desinformação!
                     </h1>
                   </div>
-
-                    
-                  <Button colorPalette="cyan" className="bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-800 w-fit">Participar</Button>
-
+                  <Button colorPalette="cyan" className="bg-blue-600 text-white font-bold py-2 px-4 hover:bg-blue-800">Participar</Button>
               </div>
             </div>
               
           </div>
 
-          <div className='w-1/2 bg-customBlue h-full flex flex-col items-center justify-center text-center max-md:hidden'>
+          <div className='w-1/2 flex flex-col items-center justify-center text-center max-lg:hidden'>
               <Image src="/images/mainImage.png" className="scale-x-[-1]" alt="mainImage" width={600} height={600}/>
           </div>
         
@@ -90,7 +89,7 @@ export default function Home() {
             <Button colorPalette="cyan" className="bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-800 px-10 mt-4" title="Começar">Começar</Button>
         </section>
 
-        <div className="flex justify-center gap-10 mb-20">
+        <div className="flex justify-center gap-10 pb-20">
             
           <Link href="/solicitarproposta">
             <Button colorPalette="cyan" className="bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-800 px-10" title="Solicitar Proposta">Solicitar Proposta</Button>
@@ -102,7 +101,8 @@ export default function Home() {
 
         </div>
 
-      </main>
+      </div>
+
     </div>
   );
 }
