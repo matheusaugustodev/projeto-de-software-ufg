@@ -1,5 +1,6 @@
 "use client";
-import { Button, Card, Input, Stack, Theme } from "@chakra-ui/react"
+import { Button, Card, Input, Stack, Theme, Link } from "@chakra-ui/react"
+import { Checkbox } from "@/components/ui/checkbox"
 import { Field } from "@/components/ui/field"
 
 export function CardWithForm() {
@@ -38,7 +39,12 @@ export function CardWithForm() {
                 </Field>
             </Stack>
           </Card.Body>
-          <Card.Footer flexDir={'column'} className="items-start">
+          <Card.Footer flexDir={'column'} className="items-center">
+            <Stack maxW="320px">
+              <Checkbox colorPalette={'blue'} required>Concordo com os {" "}
+                <Link className="" href="#" color="blue.solid"> Termos de Uso</Link>
+              </Checkbox>
+            </Stack>
             <Button type="submit" bg='blue.solid' color='white' className="w-full">
               Cadastrar
             </Button>

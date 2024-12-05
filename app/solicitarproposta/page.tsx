@@ -1,4 +1,3 @@
-import NavBar from "@/components/navBar"
 import { Button } from "@/components/ui/button"
 import Image from 'next/image'
 import { Textarea } from "@chakra-ui/react"
@@ -9,10 +8,9 @@ export default function SolicitarProposta() {
         <div className="bg-customBlue pb-20 min-h-screen">
 
 
-            <NavBar />
             <main className="text-white m-10">
 
-                <div className='flex justify-center items-center w-full mt-10 gap-10 px-5'>
+                <div className='flex justify-center items-center w-full -10 gap-10 px-5'>
 
                     <div className='lg:w-3/5 w-full flex flex-col justify-center items-center'>
 
