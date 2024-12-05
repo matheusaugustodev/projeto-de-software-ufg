@@ -76,10 +76,12 @@ export default function Home() {
         </section>
 
         <section className="bg-customBlue p-5 flex flex-col items-center pb-28 text-center">
-            <h1 className="text-white text-4xl font-bold mb-5">Nosso sitema de recompensas</h1>
+            <h1 className="text-white text-4xl font-bold mb-5">Nosso sistema de recompensas</h1>
             
-            <div className="bg-serviceBox min-h-72 h-140 flex justify-end w-full p-10">
-              <Image src="/images/token.png" className="scale-x-[-1] max-md:hidden" alt="tokenImage" width={200} height={200}/>
+            <div className="w-full">
+              <div className="bg-serviceBox min-h-72 h-140 flex justify-end p-10 mx-20">
+                <Image src="/images/token.png" className="max-md:hidden" alt="tokenImage" width={200} height={200}/>
+              </div>
             </div>
             
         </section>
@@ -89,17 +91,23 @@ export default function Home() {
             <Button colorPalette="cyan" className="bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-800 px-10 mt-4" title="Começar">Começar</Button>
         </section>
 
-        <div className="flex justify-center gap-10 pb-20">
-            
-          <Link href="/solicitarproposta">
-            <Button colorPalette="cyan" className="bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-800 px-10" title="Solicitar Proposta">Solicitar Proposta</Button>
-          </Link>
 
-          <Link href="/dashboard">
-            <Button colorPalette="cyan" className="bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-800 px-10" title="Dashboard">Dashboard</Button>
-          </Link>
+        <div className="text-center">
+          <p>Outras páginas</p>
+          <div className="flex justify-center gap-10 pb-20 mt-5">
+              
+            <Link href="/solicitarproposta">
+              <Button colorPalette="cyan" className="bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-800 px-10" title="Solicitar Proposta">Solicitar Proposta</Button>
+            </Link>
+
+            <Link href="/dashboard">
+              <Button colorPalette="cyan" className="bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-800 px-10" title="Dashboard">Dashboard</Button>
+            </Link>
+
+          </div>
 
         </div>
+
 
       </div>
 

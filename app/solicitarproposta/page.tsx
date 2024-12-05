@@ -5,7 +5,8 @@ import { Textarea } from "@chakra-ui/react"
 
 export default function SolicitarProposta() {
     return (
-        <div className="bg-customBlue h-screen">
+
+        <div className="bg-customBlue pb-20 min-h-screen">
 
 
             <NavBar />
@@ -36,7 +37,7 @@ export default function SolicitarProposta() {
                                             <Textarea placeholder="Digite a área da DAO que essa proposta afeta" className="p-2 bg-blue-700 text-xs" rows={1} />
                                         </div>
                                         <div>
-                                            <div className="font-bold text-sm"> Detalhe mais a proposta?</div>
+                                            <div className="font-bold text-sm">Detalhe mais a proposta?</div>
                                             <Textarea placeholder="Digite mais detalhes que possam ajudar a entender a proposta" className="p-2 bg-blue-700 text-xs" rows={2} />
                                         </div>
 

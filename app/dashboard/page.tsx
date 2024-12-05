@@ -4,8 +4,7 @@ import Image from 'next/image'
 
 export default function Dashboard() {
     return (
-        <div className="bg-customBlue h-screen">
-
+        <div className="bg-customBlue pb-20 min-h-screen">
 
             <NavBar />
             <main className="text-white m-10">
@@ -19,7 +18,8 @@ export default function Dashboard() {
 
                         <Card.Root className="bg-blue-700 mt-5 h-fit">
                             <Card.Body>
-                                <Card.Description className="flex items-center gap-5">
+
+                                <div className="flex items-center justify-center gap-5 text-center lg:text-start lg:justify-around">
 
                                     <div>
                                         <div className="font-bold">
@@ -31,19 +31,20 @@ export default function Dashboard() {
                                     </div>
 
                                     <div>
-                                    <Image src="/images/token.png" className="max-md:hidden" alt="tokenImage" width={50} height={50}/>
+                                        <Image src="/images/token.png" className="max-lg:hidden" alt="tokenImage" width={50} height={50}/>
                                     </div>
+                                    
+                                </div>
 
-
-                                </Card.Description>
                             </Card.Body>
                         </Card.Root>
                         <Card.Root className="bg-blue-700 mt-5 h-fit">
                             <Card.Body>
-                                <Card.Description className="flex items-center gap-5">
 
-                                    <div className="flex items-center gap-1">
-                                        <div>
+                                <div className="flex items-center justify-center gap-5 text-center lg:text-start lg:justify-around">
+
+                                    <div className="flex items-center justify-center lg:justify-around gap-1">
+                                        <div className="text-center lg:text-start">
                                             <div className="font-bold">
                                                 Valor do token
                                             </div>
@@ -57,16 +58,17 @@ export default function Dashboard() {
                                     </div>
 
                                     <div>
-                                    <Image src="/images/graficoSeta.png" className="max-md:hidden" alt="tokenImage" width={50} height={50}/>
+                                    <Image src="/images/graficoSeta.png" className="max-lg:hidden" alt="tokenImage" width={50} height={50}/>
                                     </div>
 
+                                </div>
 
-                                </Card.Description>
                             </Card.Body>
                         </Card.Root>
                         <Card.Root className="bg-blue-700 mt-5">
                             <Card.Body>
-                                <Card.Description className="flex items-center gap-5">
+
+                            <div className="flex items-center justify-center lg:justify-around gap-1 text-center lg:text-start">
 
                                     <div className="flex flex-col items-center gap-3">
                                         <div>
@@ -88,11 +90,10 @@ export default function Dashboard() {
                                     </div>
 
                                     <div>
-                                    <Image src="/images/moedaPorcentagem.png" className="max-md:hidden" alt="tokenImage" width={100} height={100}/>
+                                    <Image src="/images/moedaPorcentagem.png" className="max-lg:hidden" alt="tokenImage" width={100} height={100}/>
                                     </div>
 
-
-                                </Card.Description>
+                                </div>
                             </Card.Body>
                         </Card.Root>
 
