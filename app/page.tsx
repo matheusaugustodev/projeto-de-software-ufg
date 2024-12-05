@@ -8,7 +8,7 @@ export default function Home() {
 
       <div className="text-white">
 
-        <div className='flex justify-center items-center w-full mt-10'>
+        <div className='flex justify-center items-center w-full pt-10'>
             
           <div className='lg:w-1/2 w-full flex flex-col justify-center items-center'>
 

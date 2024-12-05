@@ -1,4 +1,3 @@
-import NavBar from "@/components/navBar"
 import { Card } from "@chakra-ui/react"
 import Image from 'next/image'
 
@@ -6,8 +5,7 @@ export default function Dashboard() {
     return (
         <div className="bg-customBlue pb-20 min-h-screen">
 
-            <NavBar />
-            <main className="text-white m-10">
+            <main className="text-white p-10">
 
 
                 <div className='flex flex-col justify-center text-start'>
