@@ -1,32 +1,24 @@
 "use client"
 import CardVotacao from "@/components/cardVotacao";
-import CardTempo from "@/components/cardTempo";
-import VotosNecessarios from "@/components/cardVotosNecessarios";;
-import { useState, useRef } from "react";
+import { useState } from "react";
+import ShowVotacao from "@/components/showVotacao";
 
 export default function Votacao() {
+
+    const [remainingTime, setRemainingTime] = useState("");
 
     const [estadoVotacao, setEstadoVotacao] = useState('Indefinido');
 
     const votar = (e: React.MouseEvent<HTMLElement>) => {
 
-        e.preventDefault;
+        e.preventDefault();
         const event = e.currentTarget;
         const votacao = event.innerText;
 
         if(votacao == 'Votar contra'){
-            setEstadoVotacao('Contra');
-            const novoEstado = estadoVotacao;
-            console.log('new' + novoEstado)
+            setEstadoVotacao('Você votou contra essa proposta');
         } else if (votacao == 'Votar a favor'){
-            setEstadoVotacao('A Favor');
-            console.log(estadoVotacao);
-        }
-
-        console.log('Layer Acima: ' + estadoVotacao)
-
-        if(event.parentElement){
-            event.parentElement.innerHTML = `<span>${estadoVotacao}</span>`
+            setEstadoVotacao('Você votou a favor dessa proposta');
         }
 
     }
@@ -50,8 +42,11 @@ export default function Votacao() {
                         <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum at corrupti unde tempore rem dolores atque, autem eos. Nam doloribus quae dolores dignissimos, error delectus pariatur. Et adipisci ad quos.</h2>
                     </div>
                     <div className="flex gap-4">
-                        <button className="bg-red-600 p-2 rounded-lg shadow-md" onClick={votar}>Votar contra</button>
-                        <button className="bg-green-600 p-2 rounded-lg shadow-md" onClick={votar}>Votar a favor</button>
+                        <button className={`p-2 rounded-lg shadow-md ${estadoVotacao === 'Indefinido' ? 'bg-red-600 text-white block' : 'hidden'}`} onClick={votar}>Votar contra</button>
+                        <button className={`p-2 rounded-lg shadow-md ${estadoVotacao === 'Indefinido' ? 'bg-green-600 text-white block' : 'hidden'}`} onClick={votar}>Votar a favor</button>
+                        {estadoVotacao !== 'Indefinido' && (
+                                <span className={`text-sm font-bold p-4 px-20 rounded-2xl text-white ${estadoVotacao === 'Você votou a favor dessa proposta' ? 'bg-green-600 ' : 'bg-red-600' }`}>{estadoVotacao}</span>
+                        )}
                     </div>
                 </div>
                 <div className="flex flex-col items-center gap-4">
@@ -59,8 +54,7 @@ export default function Votacao() {
                     <CardVotacao />
                     <div className="flex gap-4">
 
-                        <CardTempo initialDate="2024-07-22T12:10:12" finalDate="2024-11-24T22:23:12" />
-                        <VotosNecessarios />
+                          <ShowVotacao />
 
                     </div>
                     

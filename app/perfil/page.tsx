@@ -1,5 +1,4 @@
 "use client"
-import NavBar from "@/components/navBar"
 import { Card } from "@chakra-ui/react"
 import React, { useState } from "react"
 import { IoPersonSharp } from "react-icons/io5"
@@ -29,7 +28,6 @@ export default function PerfilPage() {
     return (
         
         <div>
-            <NavBar />
 
             <section className="bg-customBlue h-full md:h-screen justify-evenly items-center text-white flex flex-col">
 
