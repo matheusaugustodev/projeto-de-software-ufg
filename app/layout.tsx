@@ -1,8 +1,11 @@
-import type { Metadata } from "next";
+"use client"
 import localFont from "next/font/local";
 import "./globals.css";
 import { Provider } from "@/components/ui/provider"
 import NavBar from "@/components/navBar"
+import { usePathname } from "next/navigation";
+import { VoteProvider } from "@/context/VoteContext";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -15,25 +18,25 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata: Metadata = {
-  title: "Truth Dao",
-  description: "Desmacarando mentiras e revelando a verdade",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+  const shouldShowNavBar = !["/login", "/sign-up"].includes(pathname);
+
   return (
     <html lang="pt-br" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Provider>
-          <NavBar />
-          {children}
-        </Provider>
+        <VoteProvider>
+          <Provider>
+            {shouldShowNavBar && <NavBar />}
+            {children}
+          </Provider>
+        </VoteProvider>
       </body>
     </html>
   );

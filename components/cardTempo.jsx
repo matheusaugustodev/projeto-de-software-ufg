@@ -48,7 +48,7 @@ export default function CardTempo({ initialDate, finalDate, remainingTime, setRe
   return (
     <Card.Root className="bg-transparent shadow-md border-[1.3px] border-black">
       <Card.Body>
-        Tempo restante
+        <span className="text-md opacity-50">Tempo restante</span>
         <span className="text-4xl font-bold tracking-wider">{remainingTime}</span>
         <span className="tracking-wider">
           <p
@@ -56,7 +56,7 @@ export default function CardTempo({ initialDate, finalDate, remainingTime, setRe
               remainingTime == "CONCLUÍDA" ? "hidden" : "block"
             }`}
           >
-            dias horas minutos segundos
+          <span className="text-md opacity-50">dias horas minutos segundos</span>
           </p>
         </span>
       </Card.Body>
