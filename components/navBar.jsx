@@ -9,7 +9,7 @@ export default function NavBar() {
 
     const rotas = [
         { nome: 'Serviços', path: '/servicos', regex: /^\/servicos$/ },
-        { nome: 'Votação', path: '/votacao', regex: /^\/votacao$/ },
+        { nome: 'Votação', path: '/votacao', regex: /^\/votacao(\/.*)?$/ },
         { nome: 'Regras', path: '/regras', regex: /^\/regras$/ },
         { nome: 'Parceria', path: '/parceria', regex: /^\/parceria$/ },
         { nome: 'Sobre', path: '/sobre', regex: /^\/sobre$/ }
