@@ -1,9 +1,9 @@
-// Votacao.tsx
 "use client";
 import React, { useState } from "react";
 import { useVoteContext } from "@/context/VoteContext";
 import CardVotacao from "@/components/cardVotacao";
 import ShowVotacao from "@/components/showVotacao";
+import Link from "next/link";
 
 export default function Votacao() {
   const { castVote } = useVoteContext(); // Obtém os votos globais e a função para registrar votos
@@ -90,6 +90,9 @@ export default function Votacao() {
                 {estadoVotacao}
                 </span>
             )}
+            <Link href="/votacao/historico">
+              <button className="p-4 rounded-lg shadow-md bg-indigo-600 text-white">Histórico votações</button>
+            </Link>
             </div>
       </div>
 

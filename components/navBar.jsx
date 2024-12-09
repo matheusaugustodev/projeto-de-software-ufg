@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import { CgProfile } from "react-icons/cg";
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
@@ -8,22 +8,20 @@ import Link from "next/link";
 export default function NavBar() {
 
     const rotas = [
-        {nome: 'Serviços', path: '/servicos'},
-        {nome: 'Votação', path: '/votacao'},
-        {nome: 'Regras', path: '/regras'},
-        {nome: 'Parceria', path: '/parceria'},
-        {nome: 'Sobre', path: '/sobre'}
-    ]
+        { nome: 'Serviços', path: '/servicos', regex: /^\/servicos$/ },
+        { nome: 'Votação', path: '/votacao', regex: /^\/votacao(\/.*)?$/ },
+        { nome: 'Regras', path: '/regras', regex: /^\/regras$/ },
+        { nome: 'Parceria', path: '/parceria', regex: /^\/parceria$/ },
+        { nome: 'Sobre', path: '/sobre', regex: /^\/sobre$/ }
+    ];
 
-    // Array de pathnames
-    const pathnames = useMemo(() => rotas.map(rota => rota.path), []);
     const [activeIndex, setActiveIndex] = useState(-1);
     const pathname = usePathname();
 
     useEffect(() => {
-        const currentIndex = pathnames.indexOf(pathname);
+        const currentIndex = rotas.findIndex(rota => rota.regex.test(pathname));
         setActiveIndex(currentIndex);
-    }, [pathname, pathnames]);
+    }, [pathname]);
 
     function styleLink(index) {
         // Adiciona a classe ativa com base no índice
