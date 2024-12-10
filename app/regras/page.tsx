@@ -1,12 +1,39 @@
-  
+import { SideBar } from '@/components/SideBar';
+
 export default function Regras() {
+
     return (
-        <>
-              
-            <section className="bg-customBlue h-screen p-5 flex flex-col items-center">
-                <h1 className="text-white text-4xl font-bold">Regras</h1>
-                <p className="text-white text-lg mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, asperiores aliquam. Labore vitae nulla optio minus! Quia dolorum ipsa exercitationem fugiat consectetur quasi corrupti, nesciunt vel iste veritatis. Tempora, dignissimos!</p>
+        <div className="flex h-full relative">
+            
+            <SideBar />
+
+            <section className="bg-customBlue h-full w-2/3 p-10 justify-start items-start flex flex-col gap-8 text-white">
+                <h1 className=" text-2xl font-bold self-start justify-self-start">Regras de negócio</h1>
+                
+                <p>Mais Recentes</p>
+                <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
+
+                    <div className="bg-serviceBox h-48 w-48"></div>
+                    <div className="bg-serviceBox h-48 w-48"></div>
+                    <div className="bg-serviceBox h-48 w-48"></div>
+                    <div className="bg-serviceBox h-48 w-48"></div>
+                </div>
+                <p>Todas</p>
+                <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
+
+                    <div className="bg-serviceBox h-48 w-48"></div>
+                    <div className="bg-serviceBox h-48 w-48"></div>
+                    <div className="bg-serviceBox h-48 w-48"></div>
+                    <div className="bg-serviceBox h-48 w-48"></div>
+
+                    <div className="bg-serviceBox h-48 w-48"></div>
+                    <div className="bg-serviceBox h-48 w-48"></div>
+                    <div className="bg-serviceBox h-48 w-48"></div>
+                    <div className="bg-serviceBox h-48 w-48"></div>
+                </div>
+
             </section>
-        </>
+
+        </ div>
     )
 }

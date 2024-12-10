@@ -6,7 +6,7 @@ import LoginOptions from '@/components/loginOptions'
 export default function Login() {
     return (
 
-        <div className='flex justify-center items-center h-screen w-full'>
+        <div className='flex justify-center items-center h-full w-full'>
         
             <div className='lg:w-1/2 w-full flex flex-col justify-center items-center'>
 
@@ -33,6 +33,7 @@ export default function Login() {
                     </div>
 
                 <LoginOptions />
+
             </div>
 
             <div className='w-1/2 bg-customBlue h-full flex flex-col items-center justify-center text-center max-md:hidden'>
