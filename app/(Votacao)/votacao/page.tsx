@@ -111,7 +111,7 @@ export default function Votacao() {
       {/* Modal para confirmação do voto */}
       {modalAberto && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white text-black p-8 rounded-lg shadow-md text-center">
+          <div className="bg-white p-8 rounded-lg shadow-md text-center">
             <h2 className="text-lg font-bold mb-4">
               Confirmação de Voto
             </h2>

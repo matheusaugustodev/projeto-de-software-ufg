@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased ${ !shouldShowNavBar ? "bg-white h-screen" : "bg-customBlue text-white"}`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-customBlue`}
       >
         <VoteProvider>
           <Provider>

@@ -37,6 +37,7 @@ export default function Login() {
 
                 <LoginOptions />
             </div>
+            
             <div className='w-1/2 bg-customBlue h-full flex flex-col items-center justify-center text-center max-md:hidden'>
                 <Image src="/images/mainImage.png" className="scale-x-[-1]" alt="mainImage"  width={600} height={600}/>
             </div>
