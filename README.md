@@ -1,7 +1,7 @@
 # TRUTH DAO - FRONT END
 
 Link do projeto em produção: 
-https://projeto-de-software-ufg.vercel.app/sign-up
+https://projeto-de-software-ufg.vercel.app
 
 No momento pode-se testar as segunites rotas:
 login, signup, perfil e servicos
@@ -10,7 +10,7 @@ Repositório principal da tela Front End da Truth Dao.
 
 ## Stack
 - [NEXT JS](https://nextjs.org/) | Framework
-- [TAILWIN](https://tailwindcss.com/) | Framework
+- [TAILWIND](https://tailwindcss.com/) | Framework
 - [REACT ICONS](https://react-icons.github.io/react-icons/) | Biblioteca
 - [CHAKRA UI](https://www.chakra-ui.com/) | Biblioteca Para a construção dos componentes
 
