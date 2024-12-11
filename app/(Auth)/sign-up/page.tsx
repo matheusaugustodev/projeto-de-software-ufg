@@ -9,7 +9,7 @@ export default function Login() {
         
         <div className='flex justify-center items-center h-full w-full'>
         
-            <div className='xl:w-3/5 max-xl:w-9/11 flex flex-col justify-center items-center '>
+            <div className='xl:w-3/5 max-xl:w-9/11 flex flex-col justify-center items-center bg-white min-h-screen'>
 
                 <div className="flex flex-col justify-center items-center w-full">
                     <h1 className="text-3xl font-bold">
@@ -37,9 +37,8 @@ export default function Login() {
 
                 <LoginOptions />
             </div>
-
             <div className='w-1/2 bg-customBlue h-full flex flex-col items-center justify-center text-center max-md:hidden'>
-                <Image src="/images/mainImage.png" className="scale-x-[-1]" alt="mainImage" width={600} height={600}/>
+                <Image src="/images/mainImage.png" className="scale-x-[-1]" alt="mainImage"  width={600} height={600}/>
             </div>
 
             
