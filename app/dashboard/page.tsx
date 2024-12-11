@@ -10,7 +10,7 @@ export default function Dashboard() {
 
                 <div className='flex flex-col justify-center text-start'>
 
-                    <h1 className="text-2xl font-bold text-start">Dashboard</h1>
+                    <h1 className="text-white text-4xl font-bold mb-8">Dashboard</h1>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-5 items-end">
 
@@ -94,8 +94,46 @@ export default function Dashboard() {
                                 </div>
                             </Card.Body>
                         </Card.Root>
+                        
 
                     </div>
+
+                    <section className="bg-customBlue h-full py-12 flex flex-col w-full text-white">
+                        <div className="bg-gradient-to-r from-indigo-600 p-6 rounded-3xl mb-6">
+                            <h2 className="text-white text-2xl font-normal mb-2">Histórico de votações</h2>
+                            <span className="text-white">Você participou de 6 votações esse mês</span>
+                            <table className="w-full text-center text-white border-separate border-spacing-0">
+                                <thead>
+                                    <tr>
+                                        <th className="p-4 border-b border-gray-400 text-gray-400">Proposta</th>
+                                        <th className="p-4 border-b border-gray-400 text-gray-400">Seu Voto</th>
+                                        <th className="p-4 border-b border-gray-400 text-gray-400">% Votos</th>
+                                        <th className="p-4 border-b border-gray-400 text-gray-400">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {[
+                                        { proposta: "Proposta 1", voto: "FAVORÁVEL", votos: "56,25% A favor / 43,75% Contra", status: "EM ANDAMENTO" },
+                                        { proposta: "Proposta 2", voto: "CONTRÁRIO", votos: "51,25% A favor / 48,75% Contra", status: "CONCLUÍDO" },
+                                        { proposta: "Proposta 3", voto: "CONTRÁRIO", votos: "18,75% A favor / 81,25% Contra", status: "CONCLUÍDO" },
+                                        { proposta: "Proposta 4", voto: "FAVORÁVEL", votos: "96,25% A favor / 3,75% Contra", status: "EM ANDAMENTO" },
+                                        { proposta: "Proposta 5", voto: "FAVORÁVEL", votos: "43,75% A favor / 56,25% Contra", status: "CONCLUÍDO" },
+                                        { proposta: "Proposta 6", voto: "CONTRÁRIO", votos: "68,75% A favor / 31,25% Contra", status: "CONCLUÍDO" },
+                                    ].map((item, index) => (
+                                        <tr
+                                            key={index}
+                                            className="border-b border-gray-600"
+                                        >
+                                            <td className="p-4">{item.proposta}</td>
+                                            <td className="p-4">{item.voto}</td>
+                                            <td className="p-4">{item.votos}</td>
+                                            <td className="p-4">{item.status}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
 
                 </div>
 

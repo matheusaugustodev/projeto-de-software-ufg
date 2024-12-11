@@ -6,9 +6,9 @@ import LoginOptions from '@/components/loginOptions'
 export default function Login() {
     return (
 
-        <div className='flex justify-center items-center h-screen w-full'>
+        <div className='flex justify-center items-center  w-full'>
         
-            <div className='lg:w-1/2 w-full flex flex-col justify-center items-center'>
+            <div className='lg:w-1/2 w-full flex flex-col justify-center items-center bg-white min-h-screen'>
 
                 <div className="flex flex-col justify-center items-center text-start my-6 w-full">
                     <h1 className="text-3xl font-bold">
