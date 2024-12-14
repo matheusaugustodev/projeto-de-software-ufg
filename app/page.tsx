@@ -97,6 +97,10 @@ export default function Home() {
               <Button colorPalette="cyan" className="bg-blue-600 text-white font-bold py-2 rounded hover:bg-blue-800 px-10" title="Solicitar Proposta">Solicitar Proposta</Button>
             </Link>
 
+            <Link href="/propostas">
+              <Button colorPalette="cyan" className="bg-blue-600 text-white font-bold py-2 rounded hover:bg-blue-800 px-10" title="Solicitar Proposta">Visualizar Propostas</Button>
+            </Link>
+
             <Link href="/dashboard">
               <Button colorPalette="cyan" className="bg-blue-600 text-white font-bold py-2 rounded hover:bg-blue-800 px-10" title="Dashboard">Dashboard</Button>
             </Link>
