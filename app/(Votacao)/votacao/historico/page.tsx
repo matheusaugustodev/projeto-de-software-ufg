@@ -1,4 +1,3 @@
-import { indigo } from "@mui/material/colors";
 import Link from "next/link";
 
 export default function Historico() {
