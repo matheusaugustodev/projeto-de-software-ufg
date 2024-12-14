@@ -43,8 +43,8 @@ function ShowVotacao({ remainingTime, setRemainingTime, isVotingClosed }) {
     <div className="flex gap-4">
       {/* Componente de contagem de tempo */}
       <CardTempo
-        initialDate="2024-12-08T11:14:12"
-        finalDate="2024-12-12T17:45:12"
+        initialDate="2024-12-14T11:14:12"
+        finalDate="2024-12-18T17:45:12"
         remainingTime={remainingTime}
         setRemainingTime={setRemainingTime}
       />

@@ -41,9 +41,9 @@ export default function Historico() {
           </div>
           <div className="flex justify-center mt-4">
             <nav>
-              <ul className="flex gap-2">
+              <ul className="flex gap-2 historicoIndex">
                 {[1, 2, 3, 4, 5, 6, "...", 30].map((item, index) => (
-                  <li key={index} className="text-white cursor-pointer px-4 py-2 bg-indigo-700 rounded-md hover:bg-indigo-600">
+                  <li key={index} className={`text-white cursor-pointer px-4 py-2 rounded-md hover:bg-indigo-600 ${index === 0 ? "bg-indigo-600" : "bg-indigo-700"}`}>
                     {item}
                   </li>
                 ))}

@@ -40,6 +40,11 @@ export default function NavBar() {
                     />
                 </Link>
                 <ul className="flex gap-16 items-center">
+                    <li>
+                        <Link href="/">
+                            Home
+                        </Link>
+                    </li>
                     {rotas.map((path, index) => (
                         <li
                             key={index}
